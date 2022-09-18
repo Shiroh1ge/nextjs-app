@@ -14,18 +14,17 @@
     ```
     yarn start
     ```
-This will start both the `frontend` and `backend` projects in parallel.
-You can access the frontend on `http://localhost:4001` and the backend on `http://localhost:3001`
+4. In the `server` project, copy create a `.env` file and copy the values from `.env.example` in order to set up the environment variables.
 
+This will start both the `client` and `server` projects in parallel.
+You can access the web application on `http://localhost:3000` and the API on `http://localhost:3000/api`
 
-**NOTE:** In order to access the web app from the Node.js server, you need to build the frontend app first with `yarn build`.
-
-4. To build the projects run:
+5. To build the projects run:
     ```
     yarn build
     ```
 
-5. To run the tests run:
+6. To run the tests run:
     ```
     yarn test
     ```
