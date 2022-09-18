@@ -1,6 +1,9 @@
 // @ts-check
 import { clientEnv, clientSchema } from "./schema.mjs";
 
+// TODO use TypeScript files and some kind of environment variable validation
+// this is a good package that works with .env files: https://github.com/motdotla/dotenv
+
 const _clientEnv = clientSchema.safeParse(clientEnv);
 
 export const formatErrors = (

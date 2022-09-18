@@ -10,7 +10,7 @@ export class ClientService implements OnModuleInit {
   async onModuleInit(): Promise<void> {
     try {
       this._server = createServer({
-        dev: false,
+        dev: environmentConfig.nodeEnv === 'development',
         dir: '../client',
       });
       await this.server.prepare();

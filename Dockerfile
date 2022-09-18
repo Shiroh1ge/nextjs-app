@@ -42,6 +42,10 @@ FROM node:18-slim
 
 USER node
 
+ENV NODE_ENV=production
+# The port is passed from Cloud Run directly. Usually 8080
+#ENV PORT=8080
+
 
 # Copy required top level files
 COPY --chown=node:node --from=build /app/node_modules ./node_modules
