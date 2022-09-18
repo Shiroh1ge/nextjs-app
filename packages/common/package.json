@@ -1,0 +1,11 @@
+{
+  "name": "@org/common",
+  "packageManager": "yarn@3.2.3",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc -w"
+  }
+}

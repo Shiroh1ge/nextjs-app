@@ -9,14 +9,15 @@
   "packageManager": "yarn@3.2.3",
   "workspaces": [
     "client",
-    "server"
+    "server",
+    "packages/*"
   ],
   "scripts": {
     "workspaces:foreach": "yarn workspaces foreach -p --exclude nextjs-app --verbose",
-    "start": "concurrently \"cd server && yarn start\"",
+    "start": "yarn workspace server run start",
     "test": "yarn workspaces:foreach run test",
     "test:coverage": "yarn workspaces:foreach run test:coverage",
-    "build": "yarn workspace frontend run build && yarn workspace backend run build",
+    "build": "yarn workspaces:foreach run build",
     "lint": "yarn workspaces:foreach run lint"
   },
   "devDependencies": {

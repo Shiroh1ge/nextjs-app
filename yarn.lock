@@ -1189,6 +1189,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@org/common@workspace:*, @org/common@workspace:packages/common":
+  version: 0.0.0-use.local
+  resolution: "@org/common@workspace:packages/common"
+  languageName: unknown
+  linkType: soft
+
 "@panva/hkdf@npm:^1.0.1":
   version: 1.0.2
   resolution: "@panva/hkdf@npm:1.0.2"
@@ -2812,6 +2818,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "client@workspace:client"
   dependencies:
+    "@org/common": "workspace:*"
     "@types/node": 18.0.0
     "@types/react": 18.0.14
     "@types/react-dom": 18.0.5
@@ -7408,6 +7415,7 @@ __metadata:
     "@nestjs/schematics": 9.0.3
     "@nestjs/serve-static": 3.0.0
     "@nestjs/testing": 9.0.11
+    "@org/common": "workspace:*"
     "@types/express": 4.17.14
     "@types/jest": 28.1.4
     "@types/node": 18.7.18
