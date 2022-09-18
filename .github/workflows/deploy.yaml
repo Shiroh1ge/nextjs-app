@@ -9,6 +9,48 @@ on:
       - main
 
 jobs:
+#  These are placeholders for the build and test jobs.
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v3
+#      - name: yarn install and build
+#        run: |
+#          yarn install --immutable
+#          yarn build
+#        with:
+#        path: |
+#           **/*/dist
+#           **/*/node_modules
+
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v3
+#      - name: lint
+#        run: |
+#          yarn lint
+
+#  test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v3
+#      - name: test
+#        run: |
+#          yarn test
+
+#  e2e:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository
+#        uses: actions/checkout@v3
+#      - name: test e2e
+#        run: |
+#          yarn test:e2e
+
   deploy:
     name: Cloud Run Deployment
     runs-on: ubuntu-latest
