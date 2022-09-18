@@ -3,10 +3,10 @@ on:
 #  TODO in a real project, we would disallow pushing to master and always use pull requests instead
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@master
         with:
           version: 'latest'
-#          Ideally we should pass these secrets from a secrets manager
+          #  Ideally we should pass these secrets from a secrets manager
           service_account_email: ${{ secrets.GCP_SA_EMAIL  }}
           project_id: ${{ secrets.GCP_PROJECT_ID  }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
