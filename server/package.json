@@ -24,6 +24,7 @@
   "dependencies": {
     "@nestjs/common": "9.0.11",
     "@nestjs/core": "9.0.11",
+    "@nestjs/jwt": "9.0.0",
     "@nestjs/platform-express": "9.0.11",
     "@nestjs/serve-static": "3.0.0",
     "@org/common": "workspace:*",

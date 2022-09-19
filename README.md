@@ -49,6 +49,14 @@ Some references:
 [Cyypress](https://www.cypress.io/),
 [NextJS Testing](https://nextjs.org/docs/testing)
 
+3. State management and data fetching tools.
+   
+   a. We can use [React Query](https://react-query-v3.tanstack.com/) in combination with [Axios](https://github.com/axios/axios) for data fetching.
+   
+   b. For state management we can rely on React Query's powerful caching and use the [Context API](https://reactjs.org/docs/context.html) for state management.
+   Alternatively we can use Redux or MobX for more complex state management.
+
+
 
 ### Server
 Our backend is built with [NestJS](https://nestjs.com/). It's a Node.js framework that provides a lot of features out of the box, such as dependency injection, a CLI, etc.
@@ -63,6 +71,7 @@ Other external services can also be added there, such as `localstack`.
    
    b. If using an SQL database, we should only make changes using migrations. For this we need to set up a folder containing the migrations as well as scripts for
 running and reverting migrations and also some fixtures to seed the database with initial data.
+   
    c. We should use a managed service to host our database, such as `MongoDB Atlas`, `AWS RDS` or Google's `Cloud SQL`
 
 
