@@ -19,9 +19,10 @@ const TriviaQuestion = () => {
     if (!questions.length) {
       push('/');
     }
-    
+
     if (Object.keys(answersMap).length === questions.length) {
       // navigate to the result page if it's the last question
+      // TODO, here we can also send a request to the backend to save the user's answers
       push(`/trivia-question/result`);
     }
   }, [push, id, answersMap, questions.length]);

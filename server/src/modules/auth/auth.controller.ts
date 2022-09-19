@@ -22,9 +22,9 @@ export class AuthController {
     return '';
   }
 
+  // pseudo code for creating a user, setting the auth token on a cookie and returning the user
   @Post('signup')
   public async signupUser(@Body() body: UserModel): Promise<{ user: UserModel; authToken: string }> {
-    // pseudo code for creating a user, setting the auth token on a cookie and returning the user
     // const existingUser = await this.usersService.findOne({
     //   email: body.email,
     // });
@@ -41,12 +41,12 @@ export class AuthController {
     return {} as any;
   }
 
+  // here we login the user by email or username, compare the password with bcrypt against the database entry
   @Post('login')
   public async loginUser(
     @Body() body: { credentials: string; password: string },
     @Res() res: Response,
   ): Promise<{ user: UserModel; authToken: string }> {
-    // here we login the user by email or username, compare the password with bcrypt against the database entry
     // if the user is not found or the password is incorrect, throw a ForbiddenException
     //
     // const model = await this.usersService.findOne({

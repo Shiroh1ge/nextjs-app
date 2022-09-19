@@ -9,12 +9,13 @@
     yarn
     ```
 
-3. To start the projects run:
+3.  In the `server` project, copy create a `.env` file and copy the values from `.env.example` in order to set up the environment variables.
+
+4. To start the projects run:
 
     ```
     yarn start
     ```
-4. In the `server` project, copy create a `.env` file and copy the values from `.env.example` in order to set up the environment variables.
 
 This will start both the `client` and `server` projects in parallel.
 You can access the web application on `http://localhost:3000` and the API on `http://localhost:3000/api`
@@ -46,7 +47,7 @@ take into account what works best with NextJS.
 Some references:
 [Jest](https://jestjs.io/docs/tutorial-react),
 [React Testing Library](https://testing-library.com/docs/react-testing-library/intro),
-[Cyypress](https://www.cypress.io/),
+[Cypress](https://www.cypress.io/),
 [NextJS Testing](https://nextjs.org/docs/testing)
 
 3. State management and data fetching tools.
@@ -60,6 +61,7 @@ Some references:
 There is a new RFC for layouts currently in progress (https://github.com/vercel/next.js/discussions/37136), but for now there will be some code repetition
 
 5. The Trivia Questions API is not ready, so we are using a mock API for now. We should replace it with the real API once it's ready.
+We are also using the array indexes as the question IDs, but ideally we should use UUIDs, we should update this when the backend is ready.
 
 ### Server
 Our backend is built with [NestJS](https://nestjs.com/). It's a Node.js framework that provides a lot of features out of the box, such as dependency injection, a CLI, etc.
@@ -82,6 +84,9 @@ running and reverting migrations and also some fixtures to seed the database wit
 
 3. A tool for logging/tracing that will help with catching bugs, error reports and performance monitoring. We can use [Sentry](https://sentry.io/welcome/) or [New Relic](https://newrelic.com/)  for this.
 
+4. We need to add common conventions for response, DTO validation and error handling. This includes creating components, such as exception filters, validation pipes
+and adding validation decorators to our DTOs where appropriate.
+Some references: [Pipes](https://docs.nestjs.com/pipes), [Validation](https://docs.nestjs.com/techniques/validation), [Exception Filters](https://docs.nestjs.com/exception-filters)
 ### Packages
 The packages folder is responsible for storing shared code between the client and the server. 
 

@@ -16,11 +16,13 @@ const darkTheme = createTheme({
 });
 
 const Home: NextPage = () => {
+  // TODO we can improve the UX here by adding a load state and and error state
+
   const { data } = useGetTriviaQuestions();
   const { data: healthResponse, isLoading, error } = useGetHealth();
   const questions = data?.data;
   const healthResponseText =
-    !isLoading && !error ? `API Health response: ${healthResponse?.data}` : 'API is unavailable';
+    !isLoading && !error ? `API Health response from /api/health: ${healthResponse?.data}` : 'API is unavailable';
 
   return (
     <ErrorBoundary>
@@ -34,7 +36,6 @@ const Home: NextPage = () => {
           <div className="flex flex-col px-44 mb-6 items-center">
             <h1 className="mt-6">You will be presented with {questions?.length} True or False questions.</h1>
             <h2 className="my-6">Can you score 100%?</h2>
-
             <Link href="/trivia-question/0" className="self-center mx-auto">
               <Button variant="contained" className="bg-cyan-300 w-64">
                 Start
