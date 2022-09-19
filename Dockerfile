@@ -31,6 +31,10 @@ RUN yarn set version berry
 RUN yarn plugin import workspace-tools
 COPY .yarnrc.yml .
 
+# we pass the env variables, as the build command also requires them
+ENV NODE_ENV=production
+ENV NEXT_PUBLIC_API_URL=https://nextjs-app-mnivlgeayq-ue.a.run.app/api
+
 RUN yarn install --immutable
 RUN yarn build
 

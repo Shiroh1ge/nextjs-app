@@ -1,5 +1,6 @@
 version: '3.8'
 
+# TODO this is a work in progress docker-compose file, currently the DB is not used anywhere.
 networks:
   development:
     driver: bridge
