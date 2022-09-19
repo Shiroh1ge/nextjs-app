@@ -77,6 +77,8 @@ running and reverting migrations and also some fixtures to seed the database wit
 
 2. We should add document our API with [Swagger](https://docs.nestjs.com)
 
+3. A tool for logging/tracing that will help with catching bugs, error reports and performance monitoring. We can use [Sentry](https://sentry.io/welcome/) or [New Relic](https://newrelic.com/)  for this.
+
 ### Packages
 The packages folder is responsible for storing shared code between the client and the server. 
 
