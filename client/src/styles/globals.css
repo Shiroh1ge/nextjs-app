@@ -1,3 +1,12 @@
+@import '_css-reset.css';
+@import '_typography.css';
+
 @tailwind base;
+
+@layer base {
+    html {
+        @apply text-white;
+    }
+}
 @tailwind components;
 @tailwind utilities;

@@ -56,7 +56,10 @@ Some references:
    b. For state management we can rely on React Query's powerful caching and use the [Context API](https://reactjs.org/docs/context.html) for state management.
    Alternatively we can use Redux or MobX for more complex state management.
 
+4. Better route management. Currently, NextJS router doesn't support parent/wrapper components for nested routes, so there needs to be a wrapper component each time there is a new route.
+There is a new RFC for layouts currently in progress (https://github.com/vercel/next.js/discussions/37136), but for now there will be some code repetition
 
+5. The Trivia Questions API is not ready, so we are using a mock API for now. We should replace it with the real API once it's ready.
 
 ### Server
 Our backend is built with [NestJS](https://nestjs.com/). It's a Node.js framework that provides a lot of features out of the box, such as dependency injection, a CLI, etc.
