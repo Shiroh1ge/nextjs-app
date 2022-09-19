@@ -43,6 +43,7 @@ FROM node:18-slim
 USER node
 
 ENV NODE_ENV=production
+ENV NEXT_PUBLIC_API_URL=https://nextjs-app-mnivlgeayq-ue.a.run.app/api
 # The port is passed from Cloud Run directly. Usually 8080
 #ENV PORT=8080
 
