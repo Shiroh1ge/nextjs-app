@@ -30,6 +30,12 @@ const Header = ({ title, subtitle }: { title: string; subtitle?: string }): JSX.
         <h1 className="text-blue-50 text m-0 mr-3">{title}</h1>
         {subtitle && <h2 className="header-subtitle">{subtitle}</h2>}
       </div>
+
+      {key && (
+        <div className="ml-auto ">
+          <p>Username: {profile?.data?.name ? <b>{profile?.data?.name}</b> : <i>Unknown</i>}</p>
+        </div>
+      )}
     </div>
   );
 };

@@ -18,9 +18,9 @@ const Home: NextPage = () => {
 
   const { events } = useNostrEvents({
     filter: {
-      authors: ['9c2a6495b4e3de93f3e1cc254abe4078e17c64e5771abc676a5e205b62b1286c'],
       since: 0,
       kinds: [1],
+      limit: 10,
     },
   });
 
@@ -30,19 +30,30 @@ const Home: NextPage = () => {
         <Head>
           <title>Create T3 App </title>
         </Head>
-
-        <main className="bg-slate-800 w-screen h-screen dark prose">
+        <div>
           <Header title={'Hello World'}></Header>
-          <div className="flex flex-col px-44 mb-6 items-center">
-            <>
-              {events.map((event) => (
-                <p key={event.id}>
-                  {event.pubkey} posted: {event.content}
-                </p>
-              ))}
-            </>
-          </div>
-        </main>
+          <main className="bg-slate-800 min-h-screen dark prose">
+            <div className="w-full h-full flex">
+              <div className="w-1/4"></div>
+
+              <div className="w-1/2 ">
+                <div className="flex flex-col mb-6 items-center">
+                  {events.map((event) => (
+                    <div className="mb-2 w-full flex flex-col" key={event.id}>
+                      <div>{event.pubkey}</div>
+                      <p
+                        className="whitespace-pre-wrap break-words text-sm text-left w-full"
+                        style={{ inlineSize: '100%' }}
+                      >
+                        {event.content}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
       </ThemeProvider>
     </ErrorBoundary>
   );
