@@ -6,7 +6,8 @@ module.exports = {
   overrides: [
     {
       files: ['*.tsx'],
-      'rules': {
+      plugins: ['unused-imports'],
+      rules: {
         'no-undef': 'off',
         'react/prop-types': 'off',
         'react/display-name': 'off',
