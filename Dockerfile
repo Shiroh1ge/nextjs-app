@@ -3,6 +3,7 @@ FROM node:18-alpine As build
 WORKDIR /app
 
 # Copy required files form the top level folder
+COPY .yarn .
 COPY package.json .
 COPY yarn.lock .
 
@@ -25,11 +26,6 @@ COPY ./client/next-env.d.ts ./client/next-env.d.ts
 # Copy packages folder
 
 COPY ./packages ./packages
-
-# berry version is needed to use the workspaces feature
-RUN yarn set version berry
-RUN yarn plugin import workspace-tools
-COPY .yarnrc.yml .
 
 # we pass the env variables, as the build command also requires them
 ENV NODE_ENV=production
