@@ -6,6 +6,7 @@ WORKDIR /app
 COPY .yarn .
 COPY package.json .
 COPY yarn.lock .
+COPY .yarnrc.yml .
 
 # Copy server related files
 COPY ./server/src ./server/src
