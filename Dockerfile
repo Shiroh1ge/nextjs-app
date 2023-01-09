@@ -3,7 +3,7 @@ FROM node:18-alpine As build
 WORKDIR /app
 
 # Copy required files form the top level folder
-COPY .yarn .
+COPY .yarn ./.yarn
 COPY package.json .
 COPY yarn.lock .
 COPY .yarnrc.yml .
