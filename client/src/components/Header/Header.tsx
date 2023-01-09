@@ -24,7 +24,7 @@ const Header = ({ title, subtitle }: { title: string; subtitle?: string }): JSX.
   }, [key]);
 
   return (
-    <div className="bg-[#161b22] w-full h-16 flex items-center px-24">
+    <div className="bg-[#161b22] w-full h-16 flex items-center px-44">
       <div className="flex items-center center  h-full ">
         <Image unoptimized={true} src={logo} className="w-12 h-12" alt="logo" />
         <h1 className="text-blue-50 text m-0 mr-3">{title}</h1>

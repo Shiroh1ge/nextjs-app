@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <Header title={'Hello World'}></Header>
           <main className="bg-slate-800 min-h-screendark prose">
             <div className="w-full h-full flex">
-              <div className="w-[200px]"></div>
+              <div className="w-44"></div>
 
               <div className="flex-1">
                 <div className="flex flex-col mb-6 items-center">
@@ -46,7 +46,7 @@ const Home: NextPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-[200px]"></div>
+              <div className="w-44"></div>
             </div>
           </main>
         </div>
