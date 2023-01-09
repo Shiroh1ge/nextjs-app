@@ -31,21 +31,22 @@ const Home: NextPage = () => {
         <Head>
           <title>Create T3 App </title>
         </Head>
-        <div>
+        <div className=" w-screen max-w-[100vw] max-w-full box-border ">
           <Header title={'Hello World'}></Header>
-          <main className="bg-slate-800 min-h-screen dark prose">
+          <main className="bg-slate-800 min-h-screendark prose">
             <div className="w-full h-full flex">
-              <div className="w-1/4"></div>
+              <div className="w-[200px]"></div>
 
-              <div className="w-1/2 ">
+              <div className="flex-1">
                 <div className="flex flex-col mb-6 items-center">
                   {events.map((event) => (
-                    <div className="mb-2 w-full flex flex-col" key={event.id}>
+                    <div className="mb-2 w-full flex flex-col " key={event.id}>
                       <Event pubkey={event.pubkey} event={event} />
                     </div>
                   ))}
                 </div>
               </div>
+              <div className="w-[200px]"></div>
             </div>
           </main>
         </div>

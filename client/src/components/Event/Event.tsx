@@ -11,9 +11,6 @@ const Event = ({ pubkey, event }: { pubkey: string; event: NostrEvent }): JSX.El
   const client = useWebLnClient();
   const { data: key } = useGetPublicKey();
 
-  console.log('key', key);
-  console.log('profile', profile);
-
   useEffect(() => {
     if (key) {
     }
@@ -26,7 +23,7 @@ const Event = ({ pubkey, event }: { pubkey: string; event: NostrEvent }): JSX.El
           <b>{profile?.data?.display_name || profile?.data?.name || 'Unknown user'}</b>
         </h3>
 
-        <p>{event.content}</p>
+        <p className="break-all whitespace-pre-wrap ">{event.content}</p>
       </div>
     </div>
   );
