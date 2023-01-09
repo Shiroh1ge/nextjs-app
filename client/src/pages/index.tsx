@@ -6,6 +6,7 @@ import { createTheme } from '@mui/material';
 import Header from '../components/Header/Header';
 import React from 'react';
 import { useNostrEvents } from 'nostr-react';
+import Event from '../components/Event/Event';
 
 const darkTheme = createTheme({
   palette: {
@@ -40,13 +41,7 @@ const Home: NextPage = () => {
                 <div className="flex flex-col mb-6 items-center">
                   {events.map((event) => (
                     <div className="mb-2 w-full flex flex-col" key={event.id}>
-                      <div>{event.pubkey}</div>
-                      <p
-                        className="whitespace-pre-wrap break-words text-sm text-left w-full"
-                        style={{ inlineSize: '100%' }}
-                      >
-                        {event.content}
-                      </p>
+                      <Event pubkey={event.pubkey} event={event} />
                     </div>
                   ))}
                 </div>
