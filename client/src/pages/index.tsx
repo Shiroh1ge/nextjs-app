@@ -33,20 +33,20 @@ const Home: NextPage = () => {
         </Head>
         <div className=" w-screen max-w-[100vw] max-w-full box-border ">
           <Header title={'Hello World'}></Header>
-          <main className="bg-slate-800 min-h-screendark prose">
+          <main className="bg-slate-900 min-h-screendark prose">
             <div className="w-full h-full flex">
-              <div className="w-44"></div>
+              <div className="w-96"></div>
 
-              <div className="flex-1">
+              <div className="flex-1 my-6">
                 <div className="flex flex-col mb-6 items-center">
                   {events.map((event) => (
-                    <div className="mb-2 w-full flex flex-col " key={event.id}>
+                    <div className="mb-4 w-full flex flex-col " key={event.id}>
                       <Event pubkey={event.pubkey} event={event} />
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="w-44"></div>
+              <div className="w-96"></div>
             </div>
           </main>
         </div>

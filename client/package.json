@@ -15,6 +15,7 @@
     "@mui/styles": "5.11.2",
     "alby-js-sdk": "1.3.1",
     "axios": "0.27.2",
+    "date-fns": "2.29.3",
     "next": "12.2.5",
     "nostr-react": "0.6.1",
     "nostr-tools": "1.1.1",
