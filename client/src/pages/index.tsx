@@ -40,7 +40,7 @@ const Home: NextPage = () => {
               <div className="flex-1 my-6">
                 <div className="flex flex-col mb-6 items-center">
                   {events.map((event) => (
-                    <div className="mb-4 w-full flex flex-col " key={event.id}>
+                    <div className="mb-8 w-full flex flex-col " key={event.id}>
                       <Event pubkey={event.pubkey} event={event} />
                     </div>
                   ))}
