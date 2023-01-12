@@ -7,6 +7,7 @@ import Header from '../components/Header/Header';
 import React from 'react';
 import { useNostrEvents } from 'nostr-react';
 import Event from '../components/Event/Event';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 const darkTheme = createTheme({
   palette: {
@@ -33,11 +34,13 @@ const Home: NextPage = () => {
         </Head>
         <div className=" w-screen max-w-[100vw] max-w-full box-border ">
           <Header title={'Hello World'}></Header>
-          <main className="bg-slate-900 min-h-screendark prose">
-            <div className="w-full h-full flex">
-              <div className="w-96"></div>
+          <main className="bg-slate-900 min-h-screen dark prose">
+            <div className="w-full h-full flex py-6">
+              <div className="flex-1">
+                <Sidebar title={'asd'}></Sidebar>
+              </div>
 
-              <div className="flex-1 my-6">
+              <div className="w-[750px]">
                 <div className="flex flex-col mb-6 items-center">
                   {events.map((event) => (
                     <div className="mb-8 w-full flex flex-col " key={event.id}>
@@ -46,7 +49,7 @@ const Home: NextPage = () => {
                   ))}
                 </div>
               </div>
-              <div className="w-96"></div>
+              <div className="flex-1"></div>
             </div>
           </main>
         </div>

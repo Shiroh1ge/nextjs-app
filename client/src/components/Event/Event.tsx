@@ -3,7 +3,7 @@ import { formatDistanceToNow } from 'date-fns';
 
 import { useProfile } from 'nostr-react';
 import { Event as NostrEvent } from 'nostr-tools/event';
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 const Event = ({ pubkey, event }: { pubkey: string; event: NostrEvent }): JSX.Element => {
   const profile = useProfile({ pubkey });
