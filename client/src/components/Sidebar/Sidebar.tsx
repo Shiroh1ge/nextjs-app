@@ -10,7 +10,7 @@ const routes = [
   { name: 'Following', icon: <GroupsIcon />, path: '/following' },
 ];
 
-const Sidebar = ({ title, subtitle }: { title: string; subtitle?: string }): JSX.Element => {
+const Sidebar = (): JSX.Element => {
   const { data: key } = useGetPublicKey();
   const router = useRouter();
   console.log('router', router);

@@ -7,7 +7,6 @@ import Image from 'next/image';
 
 const Event = ({ pubkey, event }: { pubkey: string; event: NostrEvent }): JSX.Element => {
   const profile = useProfile({ pubkey });
-  console.log('event', event);
 
   return (
     <div className="w-full flex">
