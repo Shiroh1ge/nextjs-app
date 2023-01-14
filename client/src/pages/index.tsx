@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <Head>
           <title>Create T3 App </title>
         </Head>
-        {cachedEvents.current.length > 0 && (
+        {cachedEvents.current.length > 1 && (
           <Button
             variant="contained"
             className="z-[1] fixed flex top-[75px] left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center bg-cyan-300 h-[50px] w-[250px]"
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
               displayCached();
             }}
           >
-            load {cachedEvents.current.length} more
+            load {cachedEvents.current.length} new posts
           </Button>
         )}
         <div className=" w-screen max-w-[100vw] max-w-full box-border ">
