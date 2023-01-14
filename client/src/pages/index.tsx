@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         {cachedEvents.current.length > 1 && (
           <Button
             variant="contained"
-            className="z-[1] fixed flex top-[75px] left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center bg-cyan-300 h-[50px] w-[250px]"
+            className="z-[1] fixed flex top-[75px] left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center bg-cyan-300 h-[40px] w-[250px]"
             onClick={() => {
               displayCached();
             }}
