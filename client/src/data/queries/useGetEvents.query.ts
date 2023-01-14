@@ -8,9 +8,8 @@ export const useGetEvents = () => {
   const [eventsToDisplay, setEventsToDisplay] = useState([]);
   const { events, isLoading, onConnect } = useNostrEvents({
     filter: {
-      since: 10,
       kinds: [Kind.Text],
-      limit: 10,
+      limit: 100,
     },
   });
 
@@ -38,7 +37,7 @@ export const useGetEvents = () => {
       );
       cachedEvents.current = [...cachedEvents.current, ...differentEvents];
     }
-  }, [events, isFirstLoad]);
+  }, [JSON.stringify(events), JSON.stringify(eventsToDisplay), isFirstLoad]);
 
   return { eventsToDisplay, cachedEvents, displayCached };
 };
